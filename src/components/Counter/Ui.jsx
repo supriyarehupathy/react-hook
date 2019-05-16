@@ -1,10 +1,13 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { HitsCountContext } from '../Context/Context';
 
 const CounterUi = () => {
   const initialCount = 0;
   const [count, setCount] = useState(initialCount);
-  const { updateHitCount } = useContext(HitsCountContext);
+  let { dispatch } = useContext(HitsCountContext);
+  useEffect(() => {
+    dispatch({ type: 'increment' });
+  }, []);
   return (
     <>
       <h2> Example for useState </h2>
@@ -12,7 +15,6 @@ const CounterUi = () => {
       <button onClick={() => setCount(initialCount)}>Reset</button>
       <button
         onClick={() => {
-          updateHitCount();
           setCount(prevCount => prevCount + 1);
         }}
       >

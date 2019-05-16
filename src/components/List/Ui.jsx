@@ -1,9 +1,12 @@
 import React, {
   useState,
   useCallback,
-  // useReducer,
-  useMemo
+  useEffect,
+  useMemo,
+  useContext
 } from 'react';
+import { HitsCountContext } from '../Context/Context';
+
 let count1 = 0;
 
 const ListUi = () => {
@@ -26,7 +29,10 @@ const ListUi = () => {
     // ]);
   }, []);
   const memoizedValue = useMemo(() => computeExpensiveValue(), []);
-
+  let { dispatch } = useContext(HitsCountContext);
+  useEffect(() => {
+    dispatch({ type: 'increment' });
+  }, []);
   return (
     <div>
       <h1> Example for useMemo and useCallback </h1>
