@@ -9,4 +9,4 @@ const HomeUi = () => (
 
 export default HomeUi;
 
-//ToDo: As loader
+// ToDo: Implement container with loader
