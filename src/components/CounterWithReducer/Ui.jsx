@@ -34,8 +34,5 @@ const CounterWithReducer = () => {
     </>
   );
 };
-//ToDo state with multiple subvalues using useReducer
 
-// eslint-plugin-react-hooks
-//https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76
 export default CounterWithReducer;

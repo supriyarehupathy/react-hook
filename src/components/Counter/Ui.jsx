@@ -7,6 +7,7 @@ const CounterUi = () => {
   const { updateHitCount } = useContext(HitsCountContext);
   return (
     <>
+      <h2> Example for useState </h2>
       Count: {count}
       <button onClick={() => setCount(initialCount)}>Reset</button>
       <button

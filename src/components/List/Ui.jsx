@@ -29,12 +29,12 @@ const ListUi = () => {
 
   return (
     <div>
-      <h1> Example for use memo </h1>
+      <h1> Example for useMemo and useCallback </h1>
       <h1>{count}</h1>
       <button onClick={inc}>inc</button>
       <List items={items} inc={inc} />
-      <h3> Normal function </h3> {computeExpensiveValue()}
-      <h3> Memorized function</h3> {memoizedValue}
+      <h2> Normal function </h2> {computeExpensiveValue()}
+      <h2> Memorized function</h2> {memoizedValue}
     </div>
   );
 };
